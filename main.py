@@ -1,6 +1,5 @@
 from datetime import date, datetime, timedelta
 
-
 def get_birthdays_per_week(users: list) -> dict:
 
     # Перевірка якщо не передано user
@@ -45,10 +44,12 @@ def get_birthdays_per_week(users: list) -> dict:
     
     return {day: names for day, names in birthdays_per_week.items() if names}
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     users = [
-        {'name': 'Jan Koum', 'birthday': datetime(1976, 1, 1).date()},
+        {"name": "Jan Koum", "birthday": datetime(1976, 1, 1).date()},
     ]
+
     result = get_birthdays_per_week(users)
     print(result)
     # Виводимо результат
